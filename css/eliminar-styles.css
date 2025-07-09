@@ -1,0 +1,20 @@
+/* Ajuste de espaciado para las tablas de eliminar */
+.tabla-indicadores {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+    /* margin-top: 10px; */
+}
+
+/* Igualar el ancho de columnas en todas las tablas usando la clase 'cols-uniformes' */
+.cols-uniformes col:nth-child(1) { width: 12%; }
+.cols-uniformes col:nth-child(2) { width: 18%; }
+.cols-uniformes col:nth-child(3) { width: 8%; }
+.cols-uniformes col:nth-child(4) { width: 10%; }
+.cols-uniformes col:nth-child(5) { width: 10%; }
+.cols-uniformes col:nth-child(6) { width: 10%; }
+.cols-uniformes col:nth-child(7) { width: 8%; }
+.cols-uniformes col:nth-child(8) { width: 12%; }
+.cols-uniformes col:nth-child(9) { width: 8%; }
+.cols-uniformes col:nth-child(10) { width: 4%; } 

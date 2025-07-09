@@ -1,0 +1,149 @@
+/* Modal de perfil de usuario */
+.modal-perfil {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 440px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+  padding: 30px 20px;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: slideFromRight 0.5s ease forwards;
+  overflow-y: auto;
+}
+
+/* Mostrar modal cuando el checkbox está marcado */
+#toggle-perfil:checked ~ .modal-perfil {
+  display: flex;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+}
+
+.imagen {
+  border-radius: 500px;
+  border: 5px solid #FF6F2C;
+  margin-top: 20px;
+}
+
+.perfildeusuario {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+.panel-admin {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-admin {
+  display: inline-block;
+  background-color: #FF721B;
+  color: white;
+  padding: 10px 25px;
+  margin-top: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-admin:hover {
+  background-color: #e65a1a;
+}
+
+/* Estilos para el texto del perfil */
+.modal-perfil h2 {
+  margin: 15px 0 5px 0;
+  color: #333;
+}
+
+.modal-perfil h3 {
+  margin: 10px 0;
+  color: #666;
+}
+
+.modal-perfil h4 {
+  margin: 8px 0;
+  color: #888;
+}
+
+.modal-perfil p {
+  margin: 20px 0 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Botón de cerrar sesión */
+.modal-perfil a {
+  text-decoration: none;
+  color: #FF721B;
+  font-size: 24px;
+  margin-top: 20px;
+  display: block;
+}
+
+.modal-perfil a:hover {
+  color: #e65a1a;
+}
+
+/* Animaciones */
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Estilo para el botón de ver perfil (opcional) */
+.btn-ver-perfil {
+  cursor: pointer;
+  color: #FF721B;
+  text-decoration: underline;
+}
+
+.btn-ver-perfil:hover {
+  color: #e65a1a;
+}
+
+/* Personalizar el scroll del modal */
+.modal-perfil::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-perfil::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-perfil::-webkit-scrollbar-thumb {
+  background: #FF721B;
+  border-radius: 4px;
+}
+
+.modal-perfil::-webkit-scrollbar-thumb:hover {
+  background: #e65a1a;
+} 

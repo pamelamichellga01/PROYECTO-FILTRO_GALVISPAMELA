@@ -1,0 +1,111 @@
+h1 {
+    margin: 20px 0 10px;
+    text-align: center;
+    }
+
+thead tr {
+    text-align: left;
+}
+
+.tabla-indicadores {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    margin-top:10px;
+    }
+
+   
+.tabla-indicadores td {
+  padding: 12px 15px;
+}
+
+.tabla-indicadores th,
+.tabla-indicadores td {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 12px;
+    
+}
+
+.tabla-indicadores thead th {
+    border-bottom: none;
+    border-top: none;
+}
+
+/* Borde redondeado izquierdo en la primera celda */
+.tabla-indicadores tbody tr td:first-child {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    overflow: hidden;
+    border-left: 1px solid #ccc;
+    
+}
+
+/* Borde redondeado derecho en la penúltima celda (antes del icono) */
+.tabla-indicadores tbody tr td:nth-last-child(2) {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-right: 1px solid #ccc;
+    
+}
+
+.tabla-indicadores tbody tr td:last-child {
+    border-bottom: none;
+    border-top: none;
+}
+
+.circulo-con-numero {
+  position: relative;
+  width: 65px;
+  height: 45px;
+  margin: auto;
+}
+
+.circulo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.porcentaje-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+
+.btn-anadir {
+    display: inline-block;
+    margin: 30px auto;
+    background-color: #fd5700;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.contenedor-boton {
+  text-align: center;
+}
+
+.eliminar {
+  width: 40px;
+  height: 40px;
+}
+
+/* ✅ Cuando el checkbox está marcado, ocultamos la fila */
+/* Oculta cada fila si su checkbox está marcado */
+#hide-row-1:checked ~ .tabla-indicadores .fila-1,
+#hide-row-2:checked ~ .tabla-indicadores .fila-2,
+#hide-row-3:checked ~ .tabla-indicadores .fila-3,
+#hide-row-4:checked ~ .tabla-indicadores .fila-4,
+#hide-row-5:checked ~ .tabla-indicadores .fila-5,
+#hide-row-6:checked ~ .tabla-indicadores .fila-6 {
+  display: none;
+}
+    

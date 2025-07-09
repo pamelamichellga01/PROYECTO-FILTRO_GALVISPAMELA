@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/nav-styles.css">
+    <link rel="stylesheet" href="../css/ayuda-styles.css">
+    <link rel="stylesheet" href="../css/usuario-modal-styles.css">
+    <link rel="stylesheet" href="../css/add-modal-styles.css">
+    <title>Reportar</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="info">
+                <div class="nav-button">
+                    <label for="check-modal" class="btn-abrir">
+                        <img src="../assets/Group 3.svg" alt="Icono añadir">
+                        <h5>Añadir</h5>
+                    </label>
+                </div>
+                <div class="nav-button">
+                    <!-- Checkbox oculto -->
+                    <input type="checkbox" id="recargar-toggle">
+
+                    <!-- Label que actúa como botón -->
+                    <label for="recargar-toggle" class="nav-button">
+                        <img src="../assets/Icon open-reload.svg" class="icono-refresco" alt="Actualizar">
+                    </label>
+                    <h5>Refrescar</h5>
+                    </label>
+                </div>
+                <div class="nav-button">
+                    <a href="eliminar.html">
+                        <img src="../assets/Icon material-delete-forever.svg" alt="Eliminar">
+                    </a>
+                    <h5>Eliminar</h5>
+                </div>
+                <div class="nav-button">
+                    <a href="dashboard.html">
+                        <img src="../assets/kario sin kairo.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="nav-button">
+                    <a href="reportar.html">
+                        <img src="../assets/Icon material-bug-report.svg" alt="Reportar">
+                    </a>
+                    <h5>Reportar</h5>
+                </div>
+                <div class="nav-button">
+                    <a href="ayuda.html">
+                        <img src="../assets/Help.svg" alt="Ayuda">
+                    </a>
+                    <h5>Ayuda</h5>
+                </div>
+            </div>
+
+            <div class="settings">
+                <img src="../assets/Icon ionic-ios-settings.svg" alt="Configuracion" class="icon">
+                <img src="../assets/Icon material-notifications-active.svg" alt="Notificacion" class="icon">
+                <label for="toggle-perfil">
+                    <img src="../assets/pp.png" alt="Usuario" class="profile" style="cursor: pointer;">
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="information">
+            <h1>Ayudas del sistema</h1>
+            <img src="../assets/Help.svg" width="40" alt="Imagen de ayuda">
+            <h4>Módulo para inquietudes, dudas, solicitudes y ayudantías para los indicadores o sobre el sistema.</h4>
+            <!-- <button class="botonsano"> Añadir ayuda </button> -->
+        </div>
+
+        <!-- Ejemplo de contenedor de ayuda (repetir para cada elemento de la API) -->
+        <div class="large-container">
+            <img src="profile.png" style="border-radius: 30px;" width="60" height="40" alt="Imagen del usuario">
+            <p> </p>
+            <p><b>Título de la ayuda</b></p>
+
+            <!-- Eliminar solo visible si se activa -->
+            <div>
+                <i class="fa fa-lg fa-times-circle" aria-hidden="true" style="color: red;"></i>
+            </div>
+        </div>
+
+        <div class="large-container">
+            <img src="../assets/Fotografía_tipo_carnet_1.jpg" style="border-radius: 30px;" width="60" height="40" alt="Imagen del usuario">
+            <p>Diego Fernando Aceros Villalba</p>
+            <p><b>Falta de personal en maquetacion.</b></p               >
+
+            <!-- Eliminar solo visible si se activa -->
+            <div>
+                <i class="fa fa-lg fa-times-circle" aria-hidden="true" style="color: red;"></i>
+            </div>
+        </div>
+
+        <div class="large-container">
+            <img src="../assets/Fotografía_tipo_carnet_2.jpg" style="border-radius: 30px;" width="60" height="40" alt="Imagen del usuario">
+            <p>Jose Daniel Vargas Santos</p>
+            <p><b>No se puede vender los equipos</b></p>
+
+            <!-- Eliminar solo visible si se activa -->
+            <div>
+                <i class="fa fa-lg fa-times-circle" aria-hidden="true" style="color: red;"></i>
+            </div>
+        </div>
+
+        <div class="large-container">
+            <img src="../assets/Fotografía_tipo_carnet_3.jpg" style="border-radius: 30px;" width="60" height="40" alt="Imagen del usuario">
+            <p>Miguel Angel Niño Silva</p>
+            <p><b>Poco impacto e barrios de estrato 2</b></p>
+
+            <!-- Eliminar solo visible si se activa -->
+            <div>
+                <i class="fa fa-lg fa-times-circle" aria-hidden="true" style="color: red;"></i>
+            </div>
+        </div>
+
+        <div class="large-container">
+            <img src="../assets/Fotografía_tipo_carnet_4.jpg" style="border-radius: 30px;" width="60" height="40" alt="Imagen del usuario">
+            <p>Yohan Enrique Pedraza Rios</p>
+            <p><b>Poca representacion en colegios privados</b></p>
+
+            <!-- Eliminar solo visible si se activa -->
+            <div>
+                <i class="fa fa-lg fa-times-circle" aria-hidden="true" style="color: red;"></i>
+            </div>
+        </div>
+
+    </main>
+    <input type="checkbox" id="toggle-perfil" hidden>
+    <div class="modal-perfil">
+        <label for="toggle-perfil" class="cerrar-modal">&times;</label>
+        <img src="../assets/kario sin kairo.svg" alt="Logo" class="logo" width="40" style="margin-top: 60px;" />
+        <h3 class="perfildeusuario">Perfil de usuario</h3>
+        <img src="../assets/pp@2x.png" class="imagen" alt="imagen" width="140" />
+        <h2>Pedro Felipe Gomez Bonilla</h2>
+        <h4>Administrador</h4>
+        <p><b>Contacto:</b></p>
+        <h3>pedro.gomez@gmail.com</h3>
+        <h3>+57 350 670 8208</h3>
+        <h3><b>Fecha de Registro:</b> 01/01/2024</h3>
+        <a href="/" onclick="localStorage.removeItem('token')">
+            <img src="../assets/cdf94180-3b84-4001-84b3-90a2287bb534.png" alt="Cerrar sesión" style="width: 48px; height: 48px; margin-top: 20px;">
+        </a>
+    </div>
+    <input type="checkbox" id="check-modal" hidden>
+    <div class="modal">
+      <div class="modal-contenido">
+        <label for="check-modal" class="cerrar-modal">&times;</label>
+        <img src="../assets/Group 3.svg" alt="add" class="icon-add">
+        <h1>Agregar nuevo indicador</h1>
+        <form class="formulario">
+          <div class="campo">
+            <label>Indicador</label>
+            <input type="text" placeholder="Nombre del indicador">
+          </div>
+          <div class="campo">
+            <label>Fórmula</label>
+            <input type="text" placeholder="Metodología">
+          </div>
+          <div class="campo">
+            <label>Descripción</label>
+            <input type="text" placeholder="Descripción del indicador">
+          </div>
+          <div class="campo">
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría de clasificación">
+          </div>
+          <div class="campo">
+            <label>Fecha de inicio</label>
+            <input type="date">
+          </div>
+          <div class="campo">
+            <label>Fecha de terminación</label>
+            <input type="date">
+          </div>
+          <div class="campo">
+            <label>Frecuencia</label>
+            <input type="text" placeholder="Frecuencia de cumplimiento">
+          </div>
+          <div class="campo">
+            <label>Cumplimiento</label>
+            <input type="number" placeholder="Porcentaje de cumplimiento">
+          </div>
+          <div class="campo">
+            <label>Área</label>
+            <input type="text" placeholder="Área de desarrollo">
+          </div>
+          <button type="button">Añadir</button>
+        </form>
+      </div>
+    </div>
+</body>
+
+</html>

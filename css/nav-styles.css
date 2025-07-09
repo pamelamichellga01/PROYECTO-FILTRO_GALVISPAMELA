@@ -1,0 +1,98 @@
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+ }
+
+ body {
+   background-color: #fff;
+   color: #000;
+ }
+
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 12px 20px;
+   border-bottom: 1px solid #ccc;
+   background-color: white;
+ }
+
+ .info {
+   display: flex;
+   align-items: center;
+   gap: 40px;
+   flex: 1;
+   justify-content: space-evenly;
+ }
+
+ .nav-button {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 8px;
+   cursor: pointer;
+ }
+
+ .nav-button img {
+   width: 25px;
+   height: 25px;
+   margin-bottom: 5px;
+ }
+
+ .nav-button h5 {
+   font-size: 12px;
+   color: #000;
+ }
+
+ .nav-button a {
+   text-decoration: none;
+   color: inherit;
+ }
+
+ .settings {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   flex-shrink: 0;
+ }
+
+ .settings .icon {
+   width: 15px;
+   height: 15px;
+ }
+
+ .settings .profile {
+   width: 30px;
+   height: 30px;
+ }
+
+ img[src*="Help.svg"] {
+   padding: 0;
+   margin: 0;
+   object-fit: contain;
+   background-color: transparent;
+   width: 40px;
+   height: 40px;
+ }
+
+ /* ------------------------------------------------------------------- */
+ @keyframes girar {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+
+ /* Cuando el checkbox está marcado, giramos la imagen */
+ #recargar-toggle:checked+label .icono-refresco {
+   animation: girar 1s linear 1;
+ }
+
+ #recargar-toggle {
+   display: none;
+ }

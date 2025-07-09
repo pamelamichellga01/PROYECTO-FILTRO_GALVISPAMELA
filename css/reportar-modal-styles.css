@@ -1,0 +1,80 @@
+/* Botón para abrir modal */
+.btn-anadir {
+  display: inline-block;
+  background-color: #fd5700;
+  color: white;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Checkbox oculto */
+#check-modal {
+  display: none;
+}
+
+/* Modal base */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Mostrar modal al activar checkbox */
+#check-modal:checked ~ .modal {
+  display: flex;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Botón de cerrar */
+.cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Estilo del formulario */
+.ol {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.ol input,
+.ol select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+h2 {
+  text-align: center;
+}
+
+.add-modal {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
