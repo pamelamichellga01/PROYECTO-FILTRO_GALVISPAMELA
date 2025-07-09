@@ -78,21 +78,44 @@
  }
 
  /* ------------------------------------------------------------------- */
- @keyframes girar {
-   0% {
-     transform: rotate(0deg);
-   }
+ /* Estilo del icono hamburguesa solo visible en móvil */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 10px;
+}
 
-   100% {
-     transform: rotate(360deg);
-   }
- }
+/* Modo responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
- /* Cuando el checkbox está marcado, giramos la imagen */
- #recargar-toggle:checked+label .icono-refresco {
-   animation: girar 1s linear 1;
- }
+  .menu-icon {
+    display: block;
+  }
 
- #recargar-toggle {
-   display: none;
- }
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px;
+    display: none;
+    width: 100%;
+  }
+
+  #toggle-menu:checked ~ .info {
+    display: flex;
+  }
+
+  .settings {
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-button h5 {
+    font-size: 14px;
+  }
+}

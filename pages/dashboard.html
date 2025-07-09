@@ -14,6 +14,8 @@
 <body>
   <header>
     <nav class="navbar">
+      <input type="checkbox" id="toggle-menu" hidden>
+      <label for="toggle-menu" class="menu-icon">&#9776;</label>
       <div class="info">
         <div class="nav-button">
           <label for="check-modal" class="btn-abrir">
@@ -207,7 +209,7 @@
   <!-- Checkbox oculto para modal de perfil -->
   <input type="checkbox" id="toggle-perfil" hidden>
 
-  
+
   <div class="modal">
     <div class="modal-contenido">
       <label for="check-modal" class="cerrar-modal">&times;</label>
@@ -283,7 +285,8 @@
     <h3><b>Fecha de Registro:</b> 01/01/2024</h3>
 
     <a href="/" onclick="localStorage.removeItem('token')">
-      <img src="../assets/cdf94180-3b84-4001-84b3-90a2287bb534.png" alt="Cerrar sesión" style="width: 48px; height: 48px; margin-top: 20px;">
+      <img src="../assets/cdf94180-3b84-4001-84b3-90a2287bb534.png" alt="Cerrar sesión"
+        style="width: 48px; height: 48px; margin-top: 20px;">
     </a>
   </div>
 
