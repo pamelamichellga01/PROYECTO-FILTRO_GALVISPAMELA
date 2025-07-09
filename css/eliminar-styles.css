@@ -17,4 +17,14 @@
 .cols-uniformes col:nth-child(7) { width: 8%; }
 .cols-uniformes col:nth-child(8) { width: 12%; }
 .cols-uniformes col:nth-child(9) { width: 8%; }
-.cols-uniformes col:nth-child(10) { width: 4%; } 
+.cols-uniformes col:nth-child(10) { width: 4%; }
+
+/* Cursor pointer para los botones de eliminar */
+.eliminar {
+  cursor: pointer;
+}
+
+/* También para los labels que contienen los botones de eliminar */
+label[for^="hide-row-"] {
+  cursor: pointer;
+} 

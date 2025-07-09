@@ -67,3 +67,26 @@
       cursor: pointer;
       color: red;
     }
+
+/* Estilos para el botón "Volver al panel principal" */
+.contenedor-boton {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.btn-anadir {
+    display: inline-block;
+    background-color: #fd5700;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-anadir:hover {
+    background-color: #ff7f32;
+}
