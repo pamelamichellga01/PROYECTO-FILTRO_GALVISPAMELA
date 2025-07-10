@@ -288,22 +288,69 @@ thead tr {
 
 @media (max-width: 600px) {
   .tabla-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin: 0 12px 24px 12px;
-    /* Para que el scroll siempre sea visible debajo de la tabla */
-    padding-bottom: 8px;
-  }
-  .tabla-scroll::-webkit-scrollbar {
-    height: 8px;
-    background: #f0f0f0;
-  }
-  .tabla-scroll::-webkit-scrollbar-thumb {
-    background: #ff9800;
-    border-radius: 4px;
+    overflow-x: unset;
+    margin: 0 0 24px 0;
+    padding-bottom: 0;
   }
   .tabla-indicadores {
-    min-width: 750px;
+    width: 100%;
+    min-width: 0;
+    border-spacing: 0;
+    display: block;
+  }
+  .tabla-indicadores thead {
+    display: none;
+  }
+  .tabla-indicadores tbody,
+  .tabla-indicadores tr {
+    display: block;
+    width: 100%;
+  }
+  .tabla-indicadores tr {
+    margin-bottom: 18px;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px 8px;
+    margin-inline: 16px;
+    width: auto;
+  }
+  .tabla-indicadores td {
+    display: flex;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    font-size: 14px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .tabla-indicadores td::before {
+    content: attr(data-label) ": ";
+    font-weight: bold;
+    min-width: 120px;
+    color: gray;
+    margin-right: 8px;
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+  .tabla-indicadores td[data-label="Cumplimiento"],
+  .tabla-indicadores td[data-label="Cumplimiento:"] {
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .tabla-indicadores td[data-label="Cumplimiento"]::before,
+  .tabla-indicadores td[data-label="Cumplimiento:"]::before {
+    margin-right: 8px;
+    min-width: unset;
+    flex-shrink: 0;
+  }
+  .circulo-con-numero {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .contenedor-boton {
+    margin-inline: 16px;
   }
 }
     
