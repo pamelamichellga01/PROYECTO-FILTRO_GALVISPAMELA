@@ -14,6 +14,8 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   position: relative;
+   z-index: 3001;
    padding: 12px 20px;
    border-bottom: 1px solid #ccc;
    background-color: white;
@@ -54,7 +56,7 @@
  .settings {
    display: flex;
    align-items: center;
-   gap: 20px;
+   gap: 12px;
    flex-shrink: 0;
  }
 
@@ -78,44 +80,206 @@
  }
 
  /* ------------------------------------------------------------------- */
- /* Estilo del icono hamburguesa solo visible en móvil */
-.menu-icon {
+ @keyframes girar {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+
+ /* Cuando el checkbox está marcado, giramos la imagen */
+ #recargar-toggle:checked+label .icono-refresco {
+   animation: girar 1s linear 1;
+ }
+
+ #recargar-toggle {
+   display: none;
+ }
+
+/* ====== MENÚ HAMBURGUESA SIDEBAR ====== */
+
+/* Ocultar el checkbox visualmente */
+#menu-toggle {
   display: none;
-  font-size: 26px;
-  cursor: pointer;
-  padding: 10px;
 }
 
-/* Modo responsive */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+/* Icono hamburguesa */
+.menu-hamburguesa {
+  display: none;
+  width: 36px;
+  height: 36px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2001;
+  margin-top: 12px;
+  margin-left: 8px;
+}
+.menu-hamburguesa span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #222;
+  border-radius: 2px;
+  transition: 0.3s;
+}
 
-  .menu-icon {
-    display: block;
-  }
+/* Sidebar base */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.12);
+  z-index: 4001;
+  transition: left 0.3s cubic-bezier(.4,2,.6,1);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 0 0;
+}
 
-  .info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 10px;
-    display: none;
-    width: 100%;
-  }
+/* Overlay oscuro */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.18);
+  z-index: 4000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
 
-  #toggle-menu:checked ~ .info {
+/* Mostrar sidebar y overlay cuando el checkbox está activo */
+#menu-toggle:checked ~ .sidebar-menu {
+  left: 0;
+}
+#menu-toggle:checked ~ .sidebar-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Botón cerrar (X) */
+.sidebar-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 28px;
+  color: #222;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Perfil usuario en sidebar */
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px 24px 24px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 18px;
+}
+.sidebar-profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.sidebar-profile .sidebar-user-info {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-profile .sidebar-user-info span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+.sidebar-profile .sidebar-user-info small {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Enlaces del menú */
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 24px;
+}
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0 12px 0;
+  color: #222;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.sidebar-links a.active, .sidebar-links a:hover {
+  background: #f5f5f5;
+}
+.sidebar-links i, .sidebar-links img.icono-menu {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Responsive: mostrar hamburguesa solo en móviles/tablets */
+@media (max-width: 1023px) {
+  .menu-hamburguesa {
     display: flex;
   }
-
-  .settings {
-    padding-left: 10px;
-    margin-top: 10px;
+  .navbar .info {
+    display: none;
   }
+}
 
-  .nav-button h5 {
-    font-size: 14px;
+@media (min-width: 1024px) {
+  .sidebar-menu, .sidebar-overlay, #menu-toggle, .menu-hamburguesa {
+    display: none !important;
+  }
+  .navbar .info {
+    display: flex;
+  }
+}
+
+.navbar-icons-responsive {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .navbar-icons-responsive {
+    display: flex;
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 2100;
+    gap: 12px;
+    align-items: center;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  .navbar-icons-responsive .icon,
+  .navbar-icons-responsive .profile {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-icons-responsive {
+    display: none !important;
   }
 }

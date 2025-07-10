@@ -14,6 +14,11 @@
 <body>
     <header>
         <nav class="navbar">
+            <label for="menu-toggle" class="menu-hamburguesa">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
             <div class="info">
                 <div class="nav-button">
                     <label for="check-modal" class="btn-abrir">
@@ -66,12 +71,30 @@
             </div>
         </nav>
     </header>
+    <input type="checkbox" id="menu-toggle" hidden>
+    <nav class="sidebar-menu">
+      <span class="sidebar-close" onclick="document.getElementById('menu-toggle').checked=false">&times;</span>
+      <div class="sidebar-profile">
+        <img src="../assets/pp.png" alt="Usuario">
+        <div class="sidebar-user-info">
+          <span>Pedro Felipe Gomez</span>
+          <small>pedro.gomez@gmail.com</small>
+        </div>
+      </div>
+      <div class="sidebar-links">
+        <a href="dashboard.html"><img src="../assets/kario sin kairo.svg" class="icono-menu"> Home</a>
+        <a href="eliminar.html"><img src="../assets/Icon material-delete-forever.svg" class="icono-menu"> Eliminar</a>
+        <a href="reportar.html"><img src="../assets/Icon material-bug-report.svg" class="icono-menu"> Reportar</a>
+        <a href="ayuda.html"><img src="../assets/Help.svg" class="icono-menu"> Ayuda</a>
+      </div>
+    </nav>
+    <div class="sidebar-overlay" onclick="document.getElementById('menu-toggle').checked=false"></div>
 
     <main>
         <div class="information">
             <h1>Ayudas del sistema</h1>
             <img src="../assets/Help.svg" width="40" alt="Imagen de ayuda">
-            <h4>Módulo para inquietudes, dudas, solicitudes y ayudantías para los indicadores o sobre el sistema.</h4>
+            <h4 class="descripcion-ayuda">Módulo para inquietudes, dudas, solicitudes y ayudantías para los indicadores o sobre el sistema.</h4>
             <!-- <button class="botonsano"> Añadir ayuda </button> -->
         </div>
 

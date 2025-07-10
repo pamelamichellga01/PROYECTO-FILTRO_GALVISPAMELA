@@ -14,8 +14,11 @@
 <body>
   <header>
     <nav class="navbar">
-      <input type="checkbox" id="toggle-menu" hidden>
-      <label for="toggle-menu" class="menu-icon">&#9776;</label>
+      <label for="menu-toggle" class="menu-hamburguesa">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
       <div class="info">
         <div class="nav-button">
           <label for="check-modal" class="btn-abrir">
@@ -67,6 +70,25 @@
         </label>
       </div>
     </nav>
+    <input type="checkbox" id="menu-toggle" hidden>
+    <nav class="sidebar-menu">
+      <span class="sidebar-close" onclick="document.getElementById('menu-toggle').checked=false">&times;</span>
+      <div class="sidebar-profile">
+        <img src="../assets/pp.png" alt="Usuario">
+        <div class="sidebar-user-info">
+          <span>Pedro Felipe Gomez</span>
+          <small>pedro.gomez@gmail.com</small>
+        </div>
+      </div>
+      <div class="sidebar-links">
+        <a href="dashboard.html"><img src="../assets/kario sin kairo.svg" class="icono-menu"> Home</a>
+        <a href="eliminar.html"><img src="../assets/Icon material-delete-forever.svg" class="icono-menu"> Eliminar</a>
+        <a href="reportar.html"><img src="../assets/Icon material-bug-report.svg" class="icono-menu"> Reportar</a>
+        <a href="ayuda.html"><img src="../assets/Help.svg" class="icono-menu"> Ayuda</a>
+      </div>
+    </nav>
+    <div class="sidebar-overlay" onclick="document.getElementById('menu-toggle').checked=false"></div>
+
   </header>
 
   <main>
@@ -91,108 +113,108 @@
       </thead>
       <tbody>
         <tr>
-          <td>Modelado 3D</td>
-          <td>Interés por dise.........</td>
-          <td>Baja</td>
-          <td>12/05/21</td>
-          <td>12/12/21</td>
-          <td>Met.Ágil</td>
-          <td>1/4</td>
-          <td>
+          <td data-label="Indicador">Modelado 3D</td>
+          <td data-label="Descripción">Interés por dise.........</td>
+          <td data-label="Categoría">Baja</td>
+          <td data-label="Fecha de Inicio">12/05/21</td>
+          <td data-label="Fecha de Terminación">12/12/21</td>
+          <td data-label="Fórmula">Met.Ágil</td>
+          <td data-label="Frecuencia">1/4</td>
+          <td data-label="Cumplimiento">
             <div class="circulo-con-numero">
               <img src="../assets/Circled Notch.svg" alt="Progreso" class="circulo-img">
               <span class="porcentaje-texto">31%</span>
             </div>
           </td>
-          <td>Marketing</td>
-          <td><img src="../assets/Repeat Grid 2.svg" alt=""></td>
+          <td data-label="Área">Marketing</td>
+          <td data-label="Acción"><img src="../assets/Repeat Grid 2.svg" alt=""></td>
         </tr>
 
         <tr>
-          <td>Finca Galeon</td>
-          <td>Diseño de maque.......</td>
-          <td>Baja</td>
-          <td>12/04/21</td>
-          <td>12/05/21</td>
-          <td>Met.Ágil</td>
-          <td>1/4</td>
-          <td>
+          <td data-label="Indicador">Finca Galeon</td>
+          <td data-label="Descripción">Diseño de maque.......</td>
+          <td data-label="Categoría">Baja</td>
+          <td data-label="Fecha de Inicio">12/04/21</td>
+          <td data-label="Fecha de Terminación">12/05/21</td>
+          <td data-label="Fórmula">Met.Ágil</td>
+          <td data-label="Frecuencia">1/4</td>
+          <td data-label="Cumplimiento">
             <div class="circulo-con-numero">
               <img src="../assets/Circled Notch (1).svg" alt="Progreso" class="circulo-img">
               <span class="porcentaje-texto">25%</span>
           </td>
           </div>
-          <td>Diseño</td>
-          <td><img src="../assets/Repeat Grid 2.svg" alt=""></td>
+          <td data-label="Área">Diseño</td>
+          <td data-label="Acción"><img src="../assets/Repeat Grid 2.svg" alt=""></td>
         </tr>
 
         <tr>
-          <td>Colegios Privados</td>
-          <td>Se busca llegar a los....</td>
-          <td>Media</td>
-          <td>24/04/21</td>
-          <td>12/11/21</td>
-          <td>Met.Fibo </td>
-          <td>1/4</td>
-          <td>
+          <td data-label="Indicador">Colegios Privados</td>
+          <td data-label="Descripción">Se busca llegar a los....</td>
+          <td data-label="Categoría">Media</td>
+          <td data-label="Fecha de Inicio">24/04/21</td>
+          <td data-label="Fecha de Terminación">12/11/21</td>
+          <td data-label="Fórmula">Met.Fibo </td>
+          <td data-label="Frecuencia">1/4</td>
+          <td data-label="Cumplimiento">
             <div class="circulo-con-numero">
               <img src="../assets/Circled Notch (1).svg" alt="Progreso" class="circulo-img">
               <span class="porcentaje-texto">80%</span>
           </td>
-          <td>Developers</td>
-          <td><img src="../assets/Repeat Grid 2.svg" alt=""></td>
+          <td data-label="Área">Developers</td>
+          <td data-label="Acción"><img src="../assets/Repeat Grid 2.svg" alt=""></td>
         </tr>
 
         <tr>
-          <td>Electrodomesticos</td>
-          <td>Venta de electro......</td>
-          <td>Media</td>
-          <td>12/04/ 21</td>
-          <td>12/09/21</td>
-          <td>N/A </td>
-          <td>1/3</td>
-          <td>
+          <td data-label="Indicador">Electrodomesticos</td>
+          <td data-label="Descripción">Venta de electro......</td>
+          <td data-label="Categoría">Media</td>
+          <td data-label="Fecha de Inicio">12/04/ 21</td>
+          <td data-label="Fecha de Terminación">12/09/21</td>
+          <td data-label="Fórmula">N/A </td>
+          <td data-label="Frecuencia">1/3</td>
+          <td data-label="Cumplimiento">
             <div class="circulo-con-numero">
               <img src="../assets/Circled Notch.svg" alt="Progreso" class="circulo-img">
               <span class="porcentaje-texto">32%</span>
             </div>
           </td>
-          <td>Gerencia</td>
-          <td><img src="../assets/Repeat Grid 2.svg" alt=""></td>
+          <td data-label="Área">Gerencia</td>
+          <td data-label="Acción"><img src="../assets/Repeat Grid 2.svg" alt=""></td>
         </tr>
 
         <tr>
-          <td>Estrato 2 - Floridablanca</td>
-          <td>Impacto en los sec.....</td>
-          <td>Alta</td>
-          <td>12/04/ 21</td>
-          <td>12/09/21</td>
-          <td>Met.Expo</td>
-          <td>1/4</td>
-          <td>
+          <td data-label="Indicador">Estrato 2 - Floridablanca</td>
+          <td data-label="Descripción">Impacto en los sec.....</td>
+          <td data-label="Categoría">Alta</td>
+          <td data-label="Fecha de Inicio">12/04/ 21</td>
+          <td data-label="Fecha de Terminación">12/09/21</td>
+          <td data-label="Fórmula">Met.Expo</td>
+          <td data-label="Frecuencia">1/4</td>
+          <td data-label="Cumplimiento">
             <div class="circulo-con-numero">
               <img src="../assets/Circled Notch (1).svg" alt="Progreso" class="circulo-img">
               <span class="porcentaje-texto">95%</span>
           </td>
-          <td>Marketing</td>
-          <td><img src="../assets/Repeat Grid 2.svg" alt=""></td>
+          <td data-label="Área">Marketing</td>
+          <td data-label="Acción"><img src="../assets/Repeat Grid 2.svg" alt=""></td>
         </tr>
 
         <tr>
-          <td>Jovens en Accion</td>
-          <td>Impacto en los sec.....</td>
-          <td>Alta</td>
-          <td>15/02/ 21</td>
-          <td>09/11/21</td>
-          <td>Met.Expo</td>
-          <td>1/2</td>
-          <td>
+          <td data-label="Indicador">Jovens en Accion</td>
+          <td data-label="Descripción">Impacto en los sec.....</td>
+          <td data-label="Categoría">Alta</td>
+          <td data-label="Fecha de Inicio">15/02/ 21</td>
+          <td data-label="Fecha de Terminación">09/11/21</td>
+          <td data-label="Fórmula">Met.Expo</td>
+          <td data-label="Frecuencia">1/2</td>
+          <td data-label="Cumplimiento">
             <div class="circulo-con-numero">
               <img src="../assets/Circled Notch (2).svg" alt="Progreso" class="circulo-img">
               <span class="porcentaje-texto">75%</span>
           </td>
-          <td>Produccion</td>
-          <td><img src="../assets/Repeat Grid 2.svg" alt=""></td>
+          <td data-label="Área">Produccion</td>
+          <td data-label="Acción"><img src="../assets/Repeat Grid 2.svg" alt=""></td>
         </tr>
       </tbody>
     </table>
@@ -209,7 +231,7 @@
   <!-- Checkbox oculto para modal de perfil -->
   <input type="checkbox" id="toggle-perfil" hidden>
 
-
+  
   <div class="modal">
     <div class="modal-contenido">
       <label for="check-modal" class="cerrar-modal">&times;</label>
@@ -285,8 +307,7 @@
     <h3><b>Fecha de Registro:</b> 01/01/2024</h3>
 
     <a href="/" onclick="localStorage.removeItem('token')">
-      <img src="../assets/cdf94180-3b84-4001-84b3-90a2287bb534.png" alt="Cerrar sesión"
-        style="width: 48px; height: 48px; margin-top: 20px;">
+      <img src="../assets/cdf94180-3b84-4001-84b3-90a2287bb534.png" alt="Cerrar sesión" style="width: 48px; height: 48px; margin-top: 20px;">
     </a>
   </div>
 

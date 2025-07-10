@@ -1,30 +1,381 @@
-/* Ajuste de espaciado para las tablas de eliminar */
-.tabla-indicadores {
+h1 {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+thead tr {
+    text-align: left;
+}
+
+.tabla-eliminar {
     width: 90%;
     margin: 0 auto;
     border-collapse: separate;
-    border-spacing: 0 5px;
-    /* margin-top: 10px; */
 }
 
-/* Igualar el ancho de columnas en todas las tablas usando la clase 'cols-uniformes' */
-.cols-uniformes col:nth-child(1) { width: 12%; }
-.cols-uniformes col:nth-child(2) { width: 18%; }
-.cols-uniformes col:nth-child(3) { width: 8%; }
-.cols-uniformes col:nth-child(4) { width: 10%; }
-.cols-uniformes col:nth-child(5) { width: 10%; }
-.cols-uniformes col:nth-child(6) { width: 10%; }
-.cols-uniformes col:nth-child(7) { width: 8%; }
-.cols-uniformes col:nth-child(8) { width: 12%; }
-.cols-uniformes col:nth-child(9) { width: 8%; }
-.cols-uniformes col:nth-child(10) { width: 4%; }
+.tabla-eliminar td {
+  padding: 12px 15px;
+}
 
-/* Cursor pointer para los botones de eliminar */
+.tabla-eliminar th,
+.tabla-eliminar td {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 12px;
+}
+
+.tabla-eliminar thead th {
+    border-bottom: none;
+    border-top: none;
+}
+
+.tabla-eliminar tbody tr td:first-child {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    overflow: hidden;
+    border-left: 1px solid #ccc;
+}
+
+.tabla-eliminar tbody tr td:nth-last-child(2) {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-right: 1px solid #ccc;
+}
+
+.tabla-eliminar tbody tr td:last-child {
+    border-bottom: none;
+    border-top: none;
+}
+
+.circulo-con-numero {
+  position: relative;
+  width: 65px;
+  height: 45px;
+  margin: auto;
+}
+
+.circulo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.porcentaje-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+}
+
+.btn-anadir {
+    display: inline-block;
+    margin: 30px auto;
+    background-color: #fd5700;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.contenedor-boton {
+  text-align: center;
+}
+
 .eliminar {
-  cursor: pointer;
+  width: 40px;
+  height: 40px;
 }
 
-/* También para los labels que contienen los botones de eliminar */
-label[for^="hide-row-"] {
-  cursor: pointer;
-} 
+#hide-row-1:checked ~ .tabla-eliminar .fila-1,
+#hide-row-2:checked ~ .tabla-eliminar .fila-2,
+#hide-row-3:checked ~ .tabla-eliminar .fila-3,
+#hide-row-4:checked ~ .tabla-eliminar .fila-4,
+#hide-row-5:checked ~ .tabla-eliminar .fila-5,
+#hide-row-6:checked ~ .tabla-eliminar .fila-6 {
+  display: none;
+}
+
+.descripcion-indicadores {
+  margin-bottom: 22px;
+  margin-top: 10px;
+  text-align: center;
+  color: #444;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+@media (max-width: 479px) {
+  .tabla-eliminar {
+    width: 99vw;
+    font-size: 12px;
+    border-spacing: 0 5px;
+  }
+  .tabla-eliminar th, .tabla-eliminar td {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+  .circulo-con-numero {
+    width: 40px;
+    height: 28px;
+  }
+  .eliminar {
+    width: 28px;
+    height: 28px;
+  }
+  .btn-anadir {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+    margin: 18px 0;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .tabla-eliminar {
+    width: 98vw;
+    font-size: 13px;
+    border-spacing: 0 8px;
+  }
+  .tabla-eliminar th, .tabla-eliminar td {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+  .circulo-con-numero {
+    width: 48px;
+    height: 32px;
+  }
+  .eliminar {
+    width: 32px;
+    height: 32px;
+  }
+  .btn-anadir {
+    width: 90%;
+    font-size: 16px;
+    margin: 20px auto;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tabla-eliminar {
+    width: 95vw;
+    font-size: 14px;
+    border-spacing: 0 4px;
+  }
+  .tabla-eliminar th, .tabla-eliminar td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+  .circulo-con-numero {
+    width: 55px;
+    height: 38px;
+  }
+  .eliminar {
+    width: 36px;
+    height: 36px;
+  }
+  .btn-anadir {
+    width: 70%;
+    font-size: 17px;
+    margin: 22px auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .tabla-eliminar {
+    width: 90vw;
+    font-size: 15px;
+    border-spacing: 0 12px;
+  }
+  .tabla-eliminar th, .tabla-eliminar td {
+    padding: 12px 10px;
+    font-size: 15px;
+  }
+  .circulo-con-numero {
+    width: 60px;
+    height: 42px;
+  }
+  .eliminar {
+    width: 38px;
+    height: 38px;
+  }
+  .btn-anadir {
+    width: 50%;
+    font-size: 18px;
+    margin: 25px auto;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .tabla-eliminar {
+    width: 90%;
+    font-size: 16px;
+    border-spacing: 0 15px;
+  }
+  .tabla-eliminar th, .tabla-eliminar td {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+  .circulo-con-numero {
+    width: 65px;
+    height: 45px;
+  }
+  .eliminar {
+    width: 40px;
+    height: 40px;
+  }
+  .btn-anadir {
+    width: 40%;
+    font-size: 18px;
+    margin: 30px auto;
+  }
+  h1 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .tabla-eliminar {
+    width: 80%;
+    font-size: 17px;
+    border-spacing: 0 18px;
+  }
+  .tabla-eliminar th, .tabla-eliminar td {
+    padding: 14px 18px;
+    font-size: 17px;
+  }
+  .circulo-con-numero {
+    width: 70px;
+    height: 48px;
+  }
+  .eliminar {
+    width: 44px;
+    height: 44px;
+  }
+  .btn-anadir {
+    width: 30%;
+    font-size: 19px;
+    margin: 32px auto;
+  }
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .scroll-hint {
+    text-align: center;
+    font-size: 13px;
+    color: #ff9800;
+    margin-bottom: 8px;
+    margin-top: -12px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+  .tabla-scroll {
+    overflow-x: unset;
+    margin: 0 0 24px 0;
+    padding-bottom: 0;
+  }
+  .tabla-scroll::-webkit-scrollbar {
+    height: 8px;
+    background: #f0f0f0;
+  }
+  .tabla-scroll::-webkit-scrollbar-thumb {
+    background: #ff9800;
+    border-radius: 4px;
+  }
+  .tabla-eliminar {
+    width: 100%;
+    min-width: 0;
+    border-spacing: 0;
+    display: block;
+  }
+  .tabla-eliminar thead {
+    display: none;
+  }
+  .tabla-eliminar tbody,
+  .tabla-eliminar tr {
+    display: block;
+    width: 100%;
+  }
+  .tabla-eliminar tr {
+    margin-bottom: 18px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px 8px;
+  }
+  .tabla-eliminar td {
+    display: flex;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    font-size: 14px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .tabla-eliminar td::before {
+    content: attr(data-label) ": ";
+    font-weight: bold;
+    min-width: 120px;
+    color: gray;
+    margin-right: 8px;
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+  .tabla-eliminar td:nth-last-child(3) {
+    justify-content: flex-start;
+  }
+  .fila-contenedora {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .tabla-eliminar tbody tr td:first-child {
+    border-left: none;
+  }
+
+  .tabla-eliminar tbody tr td:nth-last-child(2) {
+    border-right: none;
+  }
+
+  .tabla-eliminar tbody tr td:last-child {
+    border-bottom: none;
+  }
+  .tabla-eliminar td[data-label="Cumplimiento"],
+  .tabla-eliminar td[data-label="Cumplimiento:"] {
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .tabla-eliminar td[data-label="Cumplimiento"]::before,
+  .tabla-eliminar td[data-label="Cumplimiento:"]::before {
+    margin-right: 8px;
+    min-width: unset;
+    flex-shrink: 0;
+  }
+  .circulo-con-numero {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+}

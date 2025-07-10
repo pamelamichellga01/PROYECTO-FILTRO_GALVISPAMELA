@@ -203,6 +203,35 @@ h6 {
   margin-right: 0;
 }
 
+/* --- LOGIN RESPONSIVE --- */
+.login {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 24px 12px;
+  border-radius: 30px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.login input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 479px) {
+  .login {
+    max-width: 98vw;
+    padding: 12px 16px;
+    border-radius: 18px;
+    /* Eliminar margin lateral */
+  }
+  .login input {
+    font-size: 15px;
+  }
+}
+
 
 
 
