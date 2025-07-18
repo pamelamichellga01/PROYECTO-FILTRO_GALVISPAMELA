@@ -9,9 +9,11 @@ El sistema permite a los usuarios administrativos acceder a un panel centralizad
 ## Wireframes
 
 A continuación se presenta el enlace al wireframe propuesto por el equipo de UI/UX, el cual sirvió como base para el desarrollo y diseño de este aplicativo web.  
-**Enlace al wireframe:** [Ver wireframe aquí](Pega_aquí_el_enlace_al_wireframe)
+**Enlace al wireframe:** [Ver wireframe aquí](https://www.figma.com/design/L3fPuJ2nWBYvKeLakZ38Es/Untitled?node-id=0-1&p=f&t=BVx63qS94w0GS12N-0)
 
 > El diseño, estructura y flujo de navegación de la aplicación replican fielmente la propuesta visual y de experiencia de usuario entregada por el equipo de diseño.
+
+> **Agradecimiento especial:** El diseño en Figma fue realizado por [Zharick Rojas Ardila](https://github.com/Zachlesk), ¡gracias por tu creatividad y dedicación!
 
 ## Mockups y Wireframes
 
